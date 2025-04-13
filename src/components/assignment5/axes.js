@@ -9,11 +9,11 @@ export { XAxis, YAxis };
 function YAxis (props) {
     const { yScale, height, offsetX } = props;
     return <g className="y-axis">
-        <line x1={-5} x2={0} y1={0} y2={height} stroke='black' />
+        <line x1={0} x2={0} y1={0} y2={height} stroke='black' />
         {yScale.domain().map(domainValue => (
             <g key={domainValue} className="tick">
                 <line x1={-5} x2={0} y1={yScale(domainValue) + yScale.bandwidth() / 2} y2={yScale(domainValue) + yScale.bandwidth() / 2} stroke='black' />
-                <text style={{textAnchor: 'end', fontSize:'10px'}} x={-10} y={yScale(domainValue) + yScale.bandwidth() / 2 + 5}>
+                <text style={{textAnchor: 'start', fontSize:'10px'}} x={-offsetX} y={yScale(domainValue) + yScale.bandwidth() / 2 + 5}>
                     {domainValue}
                 </text>
             </g>
