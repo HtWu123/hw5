@@ -67,7 +67,7 @@ function AirlineRoutes(){
         <Col lg={4}>
             <h2>Airlines</h2>
             {/* <svg id={"barchart"} width={barchart_width} height={barchart_height}> */}
-            <svg id={"barchart"} width={barchart_width} height={barchart_height}>
+            <svg className={styles.svgStyle} id={"barchart"} width={barchart_width} height={barchart_height}>
                 <BarChart offsetX={barchart_margin.left} offsetY={barchart_margin.top} 
                     height={barchart_inner_height} width={barchart_inner_width} data={airlines}
                     selectedAirlineID={selectedAirline} setSelectedAirlineID={setSelectedAirline}
